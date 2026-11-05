@@ -1,0 +1,58 @@
+{
+  "name": "auth",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "prep": "node scripts/prep.js",
+    "dev": "react-router dev",
+    "build": "react-router build",
+    "tsc": "tsc --noEmit",
+    "atlas": "atlas schema apply --env dev",
+    "atlas:prod": "dotenv -- atlas schema apply --env prod",
+    "ship": "node scripts/ship.js"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.18.0",
+    "@react-router/node": "^8.5.1",
+    "bcryptjs": "^3.0.3",
+    "drizzle-orm": "^0.45.4",
+    "drizzle-zod": "^0.8.3",
+    "es-toolkit": "^1.53.1",
+    "isbot": "^5.2.2",
+    "lucide-react": "latest",
+    "nanoid": "^6.0.2",
+    "qs": "^6.17.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router": "^8.5.1",
+    "remix-toast": "^4.0.0",
+    "sonner": "^2.0.8",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@react-router/dev": "^8.5.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "daisyui": "^5.7.50",
+    "dotenv-cli": "^11.1.0",
+    "drizzle-kit": "^0.31.11",
+    "oxfmt": "^0.75.0",
+    "react-router-auto-routes": "^1.0.0",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vite-plugin-devtools-json": "^1.1.2"
+  },
+  "packageManager": "pnpm@10.28.2",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "gistajs": {
+    "pin": "auth:2026-11-05-003"
+  }
+}
